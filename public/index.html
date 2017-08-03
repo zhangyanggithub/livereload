@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="socket.io.js"></script>
+</head>
+<body>
+
+<script type="text/javascript">
+    window.onload = function () {
+        var socket = io.connect('http://localhost:8080');
+        console.log(socket);
+        socket.on('reload',function () {
+            console.log('reload');
+            window.location.reload();
+        });
+    }
+</script>
+</body>
+</html>
